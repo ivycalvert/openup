@@ -1,0 +1,193 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+<body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/map-management.js"></script>
+      <script type="text/javascript" src="js/overlap-data.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+  <nav>
+    <div class="nav-wrapper" style="background-color: #f9f9f9">
+      <div class="row">
+      <a href="openup-home.html"><img src="img/title.png" alt="Title" style="height:60px; padding-top:15px; padding-left:10px " id="logo"></a>
+
+      <ul id="nav-mobile" class="right"> <!--hide-on-med-and-down">-->
+        <li><a href="openup-home.html">Home</a></li>
+        <li><a href="openup-profile.html">Profile</a></li>
+        <li><a href="openup-locations.html">Locations</a></li>
+        <!--<li><a href="openup-about.html">About</a></li>-->
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <div class="divider"></div>
+  <!--false search int he nav-->
+        <span class="false-search-nav">About<i class="material-icons" style="position:absolute; left:410px"><a href="openup-about.html">info_outline</a></i></span>
+
+
+  <div class="main">
+    <div class="container" style="padding-left:20px">
+
+      <smallish> About 7 results (0.28 seconds)</smallish>
+      
+      <!--this needs to be included in the nav bar
+    <div style="padding:20px">  
+      <div class="false-search">
+        <span>About</span>
+        <i class="material-icons"><a href="openup-about.html">info_outline</a></i>
+      </div>
+    </div>-->
+
+
+      <!--fake "links" that make up all the 'about' info-->
+      <div class="row" style="padding-top:25px">
+        <div class="col s11">
+          <h7> 
+            About Open up 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page.com
+          </h8>
+          <br>
+          <smallish>
+            'Open up' is a small scale project dedicated to presenting user Google Takeout data. This site is situated within the second and third HCI paradigms, as the primary focus is on the interpritation of the data and how the user reacts to the design. 
+            <!--A social experiment intended to make internet users more aware of what they post online, this site requires you to download and interact with your Google Takeout data. This site will not keep or store any of the data you upload, that data is yours...and Googles. Click the below button to continue to the site-->
+          </smallish>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s11">
+          <h7> 
+            How to use "Open up" 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/how-to-use-openup.com
+          </h8>
+          <br>
+          <smallish>
+            This site requires the user to download their personal Google Takeout data and interact with it. To do this, users are required first to download this data from the link provided on the Home page (the infomration currently required for this site is: Location History, Search History, and Profile information). Once this information is downloaded, the user can advance into the site where they will then be prompted in turn as to what files need uploading and where.
+          </smallish>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s11">
+          <h7> 
+            Is my privacy safe? 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/personal-security.com
+          </h8>
+          <br>
+          <smallish>
+            Personal security is very important to the 'Open up' project, and as a result 'Open up' uses local storage. This means that any data is only accessible to the site while that page is in session. As soon as the tab is refreshed, changed, or exited by the user, all data is deleted with it. With this system, the data remains in the control and posession of the user. 'Open up' does not store or track any user information.
+          </smallish>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col s11" id="profile">
+          <h7> 
+            What do I do on the "Profile" page? 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/profile-page-instructions.com
+          </h8>
+          <br>
+          <smallish>
+            By now, you should have downloaded your Google Takeout data. The next step is to unzip this and look at the contents. To interact with this page, you are required to upload the profile.json file that you just downloaded. To find this file, open the Takeout folder. Within this, there wil be another folder labeled "profile". Inside of this folder, there will be a json file labeled with your google user name. Upload this file to this page, and press submit. 
+          </smallish>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s11" id="locations">
+          <h7> 
+            How do I use the "Locations" page? 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/locations-page-instructions.com
+          </h8>
+          <br>
+          <smallish>
+            By now, you should have downloaded your Google Takeout data. The next step is to unzip this and look at the contents. To interact with this page, you are required to upload both your location history and your search history. Your location history json file needs to be uploaded to the section labeled "Locations", and one of your search history json files needs to be uploaded to the section labeled "Searches". To find your lacation history, within your Takeout folder, there will be a folder labeled "Location History". Upload the json file stored within this folder. To find your search history, within your Takeout folder, there will be a folder labeled "searches". Select any one of the json files located within this folder (these will have long names such as "2017-04-01 April 2017 to June 2017").
+          </smallish>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s11">
+          <h7> 
+            Aesthetics 
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/aesthetics.com
+          </h8>
+          <br>
+          <smallish>
+            To create a seamless experience transitioning between Google and Open up, this site borrows the already established aesthetics from Google. This creates a smoother, uninterupted user experience while using this online service.
+          </smallish>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s11">
+          <h7> 
+            Platforms compatibility
+          </h7>
+          <br>
+          <h8> 
+            http://www.openup/this-is-the-link-to-this-page/platforms.com
+          </h8>
+          <br>
+          <smallish>
+            This service is primarily developed for laptop and desktop use. As this site works with personal data and requires a multiple step process of downloading and uploading files, this service has been developed for platforms that allow the user to do these at ease. 
+          </smallish>
+        </div>
+      </div>
+    
+
+    </div>
+  </div>
+  
+
+  
+
+
+  <div class="divider"></div>
+</body>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-darken-2" href="openup-about.html">About</a>
+        <a class="grey-text text-darken-2 right">&#169; Ivy Calvert 2017</a>
+      </div>
+    </div>
+  </footer>  
+
+</html>
+
+
+
+<!-- I would like to thank all the below mentioned people/organisations for code help and support through the making of this project: w3schools, Google API and materialize documentation, codecademy, stack overflow, Thomas Lewis, my parents, Anna Gan and the wealth of star wars memes on the internet--> 

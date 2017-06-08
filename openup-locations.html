@@ -1,0 +1,98 @@
+<!-- google maps API key:AIzaSyB97v5BzBZvMVnP4GKaP4gN1yGtQ1lmrUA -->
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/styles.css"  />
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+<body>
+      <script type="text/javascript" src="js/map-management.js"></script>
+      <script type="text/javascript" src="js/file-reader.js"></script>
+      <script type="text/javascript" src="js/overlap-data.js"></script>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB97v5BzBZvMVnP4GKaP4gN1yGtQ1lmrUA&callback=initMap">
+    </script>
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right"> <!--hide-on-med-and-down">-->
+        <li><a href="openup-home.html">Home</a></li>
+        <li><a href="openup-profile.html">Profile</a></li>
+        <li><a href="openup-locations.html">Locations</a></li>
+        <!--<li><a href="openup-about.html">About</a></li>-->
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="main">
+    <div class="container">
+
+      <!--body stuff goes in here -->
+
+      <!--default button form for uploading-->
+     
+        <div class="row center">
+        <!--<div class="file-field input-field file-path-wrapper">
+          this is what is hiding the "file chosen" section of the form-->
+          <div class="col s10 offset-s1" style="padding-top:15px; padding-bottom:5px">
+          <smallish>
+        Attach your location history and search history in the labeled sections below and see what happens. 
+      </smallish></div>
+          <div class="btn">
+            <label>
+              Location  <input id="file-upload-locations"  class="file-path validate" type="file"><i class="material-icons"><a href="openup-about.html#locations">info_outline</a></i>
+            </label>
+          </div>
+            <label>
+              <button type="btn" onclick="loadFile('locations')" class="btn">Submit
+              </button>
+            </label>
+          <!--when the button is pressed it runs the js file "loadFile()"-->
+        </div>
+        <div class="row center">
+          <div class="btn">
+            <label>
+              Searches  <input id="file-upload-searches"  class="file-path validate" type="file"><i class="material-icons"><a href="openup-about.html#locations">info_outline</a></i>
+            </label>
+          </div>
+          <label>
+            <button type="btn" onclick="loadFile('searches')" class="btn">Submit
+            </button><!--when the button is pressed it runs the js file "loadFile()"-->
+          </label>  
+        </div>
+
+      <div id="data-content" style="padding-bottom:25px"> 
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="divider"></div>
+
+</body>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-darken-2" href="openup-about.html">About</a>
+        <a class="grey-text text-darken-2 right">&#169; Ivy Calvert 2017</a>
+      </div>
+    </div>
+  </footer>  
+
+</html>

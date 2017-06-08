@@ -1,0 +1,88 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+<body>
+      <script type="text/javascript" src="js/map-management.js"></script>
+      <script type="text/javascript" src="js/file-reader.js"></script>
+      <script type="text/javascript" src="js/overlap-data.js"></script>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right"> <!--hide-on-med-and-down">-->
+        <li><a href="openup-home.html">Home</a></li>
+        <li><a href="openup-profile.html">Profile</a></li>
+        <li><a href="openup-locations.html">Locations</a></li>
+        <!--<li><a href="openup-about.html">About</a></li>-->
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="main">
+    <div class="container">
+
+      <!--body stuff goes in here -->
+
+      <!--default button form for uploading-->
+      
+        <!--<div class="file-field input-field file-path-wrapper">
+          this is what is hiding the "file chosen" section of the form-->
+        <div class="row center">
+          <div class="col s10 offset-s1" style="padding-top:15px; padding-bottom:5px">
+          <smallish>
+        Attach your profile data and see what happens. To do this, go into your google takeout file, go into the folder labelled 'profile', and upload the .json file that is located here. 
+      </smallish></div>
+          <div class="btn">
+
+            <label>
+            <!--<span>File</span>-->
+              Profile  <input id="file-upload-profile"  class="file-path validate" type="file">
+            </label><i class="material-icons"><a href="openup-about.html#profile">info_outline</a></i>
+          </div>
+
+        <!--needs to become a styled button later-->
+          <label>
+            <button type="btn" onclick="loadFile('profile')" class="btn">Submit</button>
+          </label>
+          <!--<br><smallish> For help, select the info button or visit the 'About' page <smallish>   -->       
+        </div>
+        <!--<div class="divider"></div>-->
+<!--when the button is pressed it runs the js file "loadFile()"-->
+<div class="row">
+<div class="col s8 offset-s2">
+      <div id="data-content"> </div><!-- this is where the js loadFile prints-->
+    </div>
+  </div>
+  </div>
+</div>
+  
+
+  <div class="divider"></div>
+    
+   
+
+</body>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-darken-2" href="openup-about.html">About</a>
+        <a class="grey-text text-darken-2 right">&#169; Ivy Calvert 2017</a>
+      </div>
+    </div>
+  </footer>  
+
+</html>
