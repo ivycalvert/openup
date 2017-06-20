@@ -76,7 +76,12 @@ var overlappingData = {};
 
 function getOverlap(){
 	// TO:DO GET BETTER DATA SO FALSIFY IS NOT NEEDED
-	falsifyData(); //makes it falsify the data to prove functionality 
+	if( document.getElementById("data-type").checked ) {
+    falsifyData();
+}
+
+
+	//falsifyData(); //makes it falsify the data to prove functionality 
 	var overlapCount = 0;
 	for( var i = 0; i < procLocations.length; i++ ) {
 		var currentLocation = procLocations[i];

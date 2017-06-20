@@ -5202,7 +5202,7 @@ smallish {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #fff;
+  background-color: #eeeded;/*colour after clicked*/
 }
 
 .btn, .btn-large {
