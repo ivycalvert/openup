@@ -35,7 +35,7 @@ function reInitMap(){
     i++;
   }    
   
-  for( i = 0; i < markers.length-1; i++){
+  for( i = 0; i < markers.length; i++){
 
     markers[i].addListener('click', function() {
 

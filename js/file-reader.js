@@ -60,18 +60,14 @@ function loadFile( fileType ){
 
     } else if ( fileType === "profile" ) {
       document.getElementById( "data-content" ).innerHTML = 
-      "<div class=\"profile-box\" style=\"padding-left:40px\; padding-right:40px\">" + 
+      "<fieldset class=\"profile-box\" style=\"padding-left:40px\; padding-right:40px\">" + 
         "<img src=\"img/title.png\" style=\"width:90px\; padding-top:35px\">" +
         "<br>" +
         "<h5>Hi " + data.displayName + "</h5>" +
         "<div class=\"row\">" +
-          "<div class=\"col s2\">" +
-            "<img src=\"img/" + data.gender + ".png\"  style=\"height:80px\">" +
-          "</div>" +
-          "<br>" +
-          "<br>" +
-          "<div class=\"col s6\">" +
-            "<h6>" + data.emails[0].value + "</h6>" +
+          "<div>" +
+            "<img src=\"img/" + data.gender + ".png\"  class=\"col offfset-s0\" style=\"height:80px\; align=\"left\">" +
+            "<h6 style=\"padding-top:50px\">" + data.emails[0].value + "</h6>" +
           "</div>" +
         "</div>" +
         "<div class=\"row\">" +
@@ -82,7 +78,7 @@ function loadFile( fileType ){
             "<div class=\"divider-darker\">" +
           //"</div>" +
         "</div>" +
-      "</div>" 
+      "</fieldset>" 
           //"<ul>" + 
             //"<li> Name : " + data.displayName + "</li>" +
             //"<li> Age : " + data.ageRange.min + "<li>" +
