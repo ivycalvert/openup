@@ -7,6 +7,12 @@ var locationCap = 1000;
 var locations;
 var searches;
 
+
+function loadLocationsAndSearches(){
+  loadFile( 'locations' );
+  loadFile( 'searches' );
+}
+
 //this is called by the html on 'submit' 
 function loadFile( fileType ){
   var input, file, fr;

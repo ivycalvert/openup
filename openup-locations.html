@@ -54,10 +54,10 @@
       </smallish></div>
           <div class="btn">
             <label>
-              Location  <input id="file-upload-locations"  class="file-path validate" type="file"><a href="openup-about.html" class="right">&#9432;</a>
+              Location  <input id="file-upload-locations"  class="file-path validate" type="file"><a href="openup-about.html#locations" class="right">&#9432;</a>
             </label>
           </div>
-            <label>
+            <!--<label>
               <button type="btn" onclick="loadFile('locations')" class="btn">Submit
               </button>
             </label>
@@ -66,20 +66,24 @@
         <div class="row center">
           <div class="btn">
             <label>
-              Searches  <input id="file-upload-searches"  class="file-path validate" type="file"><a href="openup-about.html" class="right">&#9432;</a>
+              Searches  <input id="file-upload-searches"  class="file-path validate" type="file"><a href="openup-about.html#locations" class="right">&#9432;</a>
             </label>
           </div>
-          <label>
-            <button type="btn" onclick="loadFile('searches')" class="btn">Submit
-            </button><!--when the button is pressed it runs the js file "loadFile()"-->
-          </label>  
+          
         </div>
 <div class="row center">
     <form>
       <input type="checkbox" id="data-type" />
-      <label for="data-type">Falsify Data?</label>
+      <label for="data-type">Falsify Data?<a href="openup-about.html#falsify" class="right">&#9432;</a></label>
     </form>
 </div>
+	<div class="row center">
+		<label>
+			<!-- one submit button for both forms-->
+            <button type="btn" onclick="loadLocationsAndSearches()" class="btn">Submit
+            </button><!--when the button is pressed it runs the js file "loadFile()"-->
+        </label>  
+    </div>
 
 
 
